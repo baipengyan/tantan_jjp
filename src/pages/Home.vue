@@ -2,7 +2,7 @@
 	<div class="home">
 		<!--头部-->
     <LeftMenu v-on:changeLeftMenu="toggleMenuIsShow"></LeftMenu>
-    <RightMenu />
+    <RightMenu /> 
 		<header>
 			<div class="lefticon" @click="toLeftMenu">
 				<svg class="icon" aria-hidden="true">
@@ -74,9 +74,6 @@ header {
   height: 50px;
   background: darkred;
   color: white;
-  position: absolute;
-  left: 0;
-  top: 0;
   line-height: 50px;
   text-align: center;
   font-size: 18px;
