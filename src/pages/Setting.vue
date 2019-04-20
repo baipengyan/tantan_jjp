@@ -87,6 +87,10 @@ export default {
 };
 </script>
 <style>
+.setting {
+  padding-top: 50px;
+  font-size: 16px;
+}
 .weui-cells__title {
   color: #d73d49;
 }

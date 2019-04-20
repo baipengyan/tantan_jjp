@@ -6,9 +6,10 @@ Vue.use(VueRouter)
 // 首页
 import Home from '../pages/Home.vue'
 import Login from '../pages/Login.vue'
-import Register from '../pages/Register.vue'
-import Index from '../components/Index.vue'
-import Setting from '../components/Setting.vue'
+import Index from '../pages/Index.vue'
+import Setting from '../pages/Setting.vue'
+import Privilege from '../pages/Privilege.vue'
+import Authentication from '../pages/Authentication.vue'
 
 let routes = [
     {
@@ -27,14 +28,17 @@ let routes = [
             }, {
                 path: 'setting',
                 component: Setting
+            }, {
+                path: 'privilege',
+                component: Privilege
+            }, {
+                path: 'authentication',
+                component: Authentication
             }
         ]
     }, {
         path: '/login',
         component: Login
-    }, {
-        path: '/register',
-        component: Register
     }
 ]
 

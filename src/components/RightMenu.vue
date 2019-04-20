@@ -186,8 +186,11 @@ em {
   flex: 1;
   background: rgb(78, 107, 160);
 }
+
 .right {
-  flex: 9;
+flex: 9;
+  right: -100%;
+  width: 80%;
   height: 100%;
   /* background: #000;
   opacity: 0.8; */
@@ -278,8 +281,6 @@ i {
   height: 100%;
   float: left;
   line-height: 30px;
-  /* border-radius: 10px 0px 0px 8px; */
-  /* background: #757879; */
 }
 .content {
   display: none;

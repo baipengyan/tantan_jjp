@@ -200,8 +200,7 @@
 			}
 		},
 		mounted() {
-			this.drap('#box'),
-				this.super()
+			this.drap('#box')
 		}
 	}
 </script>

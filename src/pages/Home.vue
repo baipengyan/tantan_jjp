@@ -9,10 +9,8 @@
 					<use xlink:href="#icon-hanbaocaidan"></use>
 				</svg>
 			</div>
-			<span class="h_title">
-				探探
-			</span>
-			<div class="righticon">
+			<span class="h_title" ref="titleName" v-text="currentTitle"></span>
+			<div class="righticon" @click="toRightMenu">
 				<svg class="icon" aria-hidden="true">
 					<use xlink:href="#icon-sousuoyinyongshuix"></use>
 				</svg>
@@ -28,7 +26,9 @@ import RightMenu from "../components/RightMenu.vue";
 export default {
   data() {
     return {
-      leftMenuIsShow: false
+      rightMenuIsShow: false,
+      leftMenuIsShow: false,
+      currentTitle: "探探"
     };
   },
   components: {
@@ -44,8 +44,17 @@ export default {
         this.$(".home").animate({ left: 0 });
       }
     },
-    toggleMenuIsShow() {
+    toRightMenu() {
+      this.rightMenuIsShow = !this.rightMenuIsShow;
+      if (this.rightMenuIsShow) {
+        this.$(".home").animate({ left: "-80%" });
+      } else {
+        this.$(".home").animate({ left: 0 });
+      }
+    },
+    toggleMenuIsShow(titleName) {
       this.toLeftMenu();
+      this.$refs.titleName.innerText = titleName;
     }
   }
 };
@@ -69,6 +78,7 @@ header {
   text-align: center;
   font-size: 18px;
   display: flex;
+  z-index: 99;
 }
 
 .iconfont {
