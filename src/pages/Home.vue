@@ -2,7 +2,7 @@
 	<div class="home">
 		<!--头部-->
     <LeftMenu v-on:changeLeftMenu="toggleMenuIsShow"></LeftMenu>
-    <!-- <RightMenu /> -->
+    <RightMenu />
 		<header>
 			<div class="lefticon" @click="toLeftMenu">
 				<svg class="icon" aria-hidden="true">
@@ -10,7 +10,7 @@
 				</svg>
 			</div>
 			<span class="h_title" ref="titleName" v-text="currentTitle"></span>
-			<div class="righticon">
+			<div class="righticon" @click="toRightMenu">
 				<svg class="icon" aria-hidden="true">
 					<use xlink:href="#icon-sousuoyinyongshuix"></use>
 				</svg>
@@ -22,30 +22,39 @@
 
 <script>
 import LeftMenu from "../components/LeftMenu.vue";
-// import RightMenu from "../components/RightMenu.vue";
+import RightMenu from "../components/RightMenu.vue";
 export default {
   data() {
     return {
+      rightMenuIsShow: false,
       leftMenuIsShow: false,
-      currentTitle: '探探'
+      currentTitle: "探探"
     };
   },
   components: {
     LeftMenu,
-    // RightMenu
+    RightMenu
   },
   methods: {
     toLeftMenu() {
-      this.leftMenuIsShow = !this.leftMenuIsShow
-      if(this.leftMenuIsShow) {
-        this.$('.home').animate({left: '80%'})
+      this.leftMenuIsShow = !this.leftMenuIsShow;
+      if (this.leftMenuIsShow) {
+        this.$(".home").animate({ left: "80%" });
       } else {
-        this.$('.home').animate({left: 0})
+        this.$(".home").animate({ left: 0 });
+      }
+    },
+    toRightMenu() {
+      this.rightMenuIsShow = !this.rightMenuIsShow;
+      if (this.rightMenuIsShow) {
+        this.$(".home").animate({ left: "-80%" });
+      } else {
+        this.$(".home").animate({ left: 0 });
       }
     },
     toggleMenuIsShow(titleName) {
-      this.toLeftMenu()
-      this.$refs.titleName.innerText = titleName
+      this.toLeftMenu();
+      this.$refs.titleName.innerText = titleName;
     }
   }
 };
@@ -103,6 +112,4 @@ header {
 .righticon {
   flex: 1;
 }
-
-
 </style>
