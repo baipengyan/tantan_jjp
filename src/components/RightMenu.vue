@@ -1,7 +1,7 @@
 <template>
 <div>
-     <div class="rightmenu">
-    <div class="left"></div>
+    <div class="rightmenu">
+    <!-- <div class="left"></div> -->
     <div class="right">
         <div class="numpeople">3个配对</div>
         <div class="friendQ">
@@ -172,14 +172,14 @@ em {
   bottom: -15px;
 }
 .rightmenu {
-  width: 100%;
+  width: 80%;
   height: 100%;
   display: flex;
   font-size: 16px;
   color: aliceblue;
   position: absolute;
-  bottom: 0px;
-  right: 0px;
+  top: 0;
+  left: 100%;
   /* z-index: 99; */
 }
 .left {

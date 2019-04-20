@@ -78,6 +78,7 @@ header {
   text-align: center;
   font-size: 18px;
   display: flex;
+  position: fixed;
   z-index: 99;
 }
 
