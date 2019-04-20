@@ -10,6 +10,7 @@ import Index from '../pages/Index.vue'
 import Setting from '../pages/Setting.vue'
 import Privilege from '../pages/Privilege.vue'
 import Authentication from '../pages/Authentication.vue'
+import Edituser from '../pages/Edituser.vue'
 
 let routes = [
     {
@@ -34,6 +35,9 @@ let routes = [
             }, {
                 path: 'authentication',
                 component: Authentication
+            }, {
+                path: 'edituser',
+                component: Edituser
             }
         ]
     }, {

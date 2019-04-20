@@ -22,7 +22,7 @@
 
 <script>
 import LeftMenu from "../components/LeftMenu.vue";
-// import RightMenu from "../components/RightMenu.vue";
+import RightMenu from "../components/RightMenu.vue";
 export default {
   data() {
     return {
@@ -32,7 +32,7 @@ export default {
   },
   components: {
     LeftMenu,
-    // RightMenu
+    RightMenu
   },
   methods: {
     toLeftMenu() {

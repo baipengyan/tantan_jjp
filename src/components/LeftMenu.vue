@@ -10,7 +10,7 @@
            <div class="con">
                 <img src="../assets/yhw.jpg" alt="">
                 <h3>name</h3>
-                <a href="javascript:;">点击编辑</a>
+                <a href="javascript:;" @click="editUser">点击编辑</a>
            </div>
         </div>
         <div class="menu">
@@ -63,6 +63,10 @@ export default {
       let path = this.menus[index]['path']
       this.$router.push({path})
       this.$emit('changeLeftMenu', this.menus[index]['con'])
+    },
+    editUser() {
+      this.$router.push({path: '/home/edituser'})
+      this.$emit('changeLeftMenu', '编辑用户')
     }
   }
 }
